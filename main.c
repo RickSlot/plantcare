@@ -190,6 +190,6 @@ double thermistor(int RawADC) {
 	double temp;
 	temp = log(10000.0 * ((1024.0 / RawADC - 1)));
 	temp = 1 / (0.001129148 + (0.000234125 + (0.0000000876741 * temp * temp)) * temp);
-	temp = temp - 190.15; // Convert Kelvin to Celcius
+	temp = temp - 273.15; // Convert Kelvin to Celcius
 	return temp;
 }
